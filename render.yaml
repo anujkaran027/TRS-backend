@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: mapmate-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt &&
+      python manage.py migrate &&
+      python manage.py load_data &&
+      python manage.py collectstatic --no-input
+    startCommand: gunicorn project.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      PYTHON_VERSION: 3.11.9
