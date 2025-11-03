@@ -1,0 +1,32 @@
+# backend
+db.sqlite3
+*.sqlite3
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+instance/
+.webassets-cache
+.scrapy
+
+# Django
+local_settings.py
+media/
+staticfiles/
+
+#ml
+api/ml/saved.pkl
+
+#env
+.env
